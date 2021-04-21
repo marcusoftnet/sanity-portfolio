@@ -4,7 +4,9 @@
   "private": true,
   "dependencies": {
     "@craco/craco": "^6.1.1",
+    "@sanity/block-content-to-react": "^2.0.7",
     "@sanity/client": "^2.8.0",
+    "@sanity/image-url": "^0.140.22",
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
@@ -16,9 +18,9 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "craco start",
-    "build": "craco build",
-    "test": "craco test"
+    "start": "npm-run-all start:*",
+    "start:craco": "craco start",
+    "start:sanity": "sanity start"
   },
   "eslintConfig": {
     "extends": [
@@ -39,8 +41,10 @@
     ]
   },
   "devDependencies": {
+    "@sanity/cli": "^2.8.0",
     "@tailwindcss/postcss7-compat": "^2.1.0",
     "autoprefixer": "^9.8.6",
+    "npm-run-all": "^4.1.5",
     "postcss": "^7.0.35",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.1.0"
   }
