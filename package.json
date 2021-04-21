@@ -19,6 +19,7 @@
   },
   "scripts": {
     "start": "npm-run-all start:*",
+    "build": "craco build",
     "start:craco": "craco start",
     "start:sanity": "sanity start"
   },
